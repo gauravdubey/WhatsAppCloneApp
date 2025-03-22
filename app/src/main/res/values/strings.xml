@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WhatsAppCloneApp</string>
+    <string name="whatsapp_title">WhatsApp</string>
 </resources>

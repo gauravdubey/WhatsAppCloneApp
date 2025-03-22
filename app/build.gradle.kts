@@ -76,6 +76,9 @@ dependencies {
     // Lottie
     implementation(libs.lottie)
 
+    // Google Accomanist
+    implementation(libs.accompanist.systemuicontroller)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

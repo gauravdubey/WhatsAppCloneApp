@@ -5,20 +5,27 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.platform.LocalView
 import com.gaurav.whatsappcloneapp.ui.theme.Typography
-import com.gaurav.whatsappcloneapp.ui.theme.primaryColor
-import com.gaurav.whatsappcloneapp.ui.theme.secondaryColor
+import com.gaurav.whatsappcloneapp.ui.theme.grayColor
+import com.gaurav.whatsappcloneapp.ui.theme.greenColor
+import com.gaurav.whatsappcloneapp.ui.theme.lightGreenColor
+import com.gaurav.whatsappcloneapp.ui.theme.lightGreyColor
 import com.gaurav.whatsappcloneapp.ui.theme.whiteColor
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 private val DarkColorScheme = darkColorScheme(
-    primary = primaryColor,
-    secondary = secondaryColor,
+    primary = grayColor,
+    secondary = lightGreyColor,
+    background = lightGreyColor,
     tertiary = whiteColor
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = primaryColor,
-    secondary = secondaryColor,
+    primary = greenColor,
+    secondary = lightGreenColor,
+    background = whiteColor,
     tertiary = whiteColor
 
 )
@@ -34,6 +41,18 @@ fun WhatsAppCloneAppTheme(
         DarkColorScheme
     } else {
         LightColorScheme
+    }
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        val systemUiController = rememberSystemUiController()
+        val statusBarColor = if (darkTheme) DarkColorScheme.primary else LightColorScheme.primary
+        val navigationBarColor =
+            if (darkTheme) DarkColorScheme.background else LightColorScheme.background
+
+        SideEffect {
+//            SystemUiController.setStatusBarColor(statusBarColor)
+//            SystemUiController.setNavigationBarColor(navigationBarColor)
+        }
     }
 
     MaterialTheme(
