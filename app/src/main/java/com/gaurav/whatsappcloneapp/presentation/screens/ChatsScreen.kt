@@ -21,7 +21,6 @@ import com.gaurav.whatsappcloneapp.presentation.components.UserImage
 @Composable
 fun ChatsScreen() {
 
-
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -33,6 +32,9 @@ fun ChatsScreen() {
         }
         items(chatList) { chatData ->
             ChatListItem(chatData)
+        }
+        item {
+            Spacer(modifier = Modifier.height(40.dp))
         }
     }
 

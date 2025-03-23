@@ -2,7 +2,9 @@ package com.gaurav.whatsappcloneapp.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Tab
@@ -25,8 +27,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gaurav.whatsappcloneapp.data.TabData
 import com.gaurav.whatsappcloneapp.data.tabs
-import com.gaurav.whatsappcloneapp.ui.theme.greenColor
-import com.gaurav.whatsappcloneapp.ui.theme.whiteColor
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable
@@ -105,6 +105,7 @@ fun TabWithUnreadCount(tabData: TabData) {
         horizontalArrangement = Arrangement.Center
     ) {
         TabTitle(tabData.title)
+        Spacer(modifier = Modifier.size(2.dp))
         tabData.unreadCount?.also { unreadCount ->
             CircularCountComponent(
                 unreadCount = unreadCount.toString(),

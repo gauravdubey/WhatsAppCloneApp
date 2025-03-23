@@ -81,6 +81,87 @@ val chatList = listOf(
             timestamp = "17/03/2025",
             unreadCount = 3
         ),
-        username = "Sourav Ganguly"
+        username = "Saurav Ganguly"
+    ),
+    ChatListDataObject(
+        chatId = 8,
+        message = Message(
+            content = "Good morning! Have a great day ahead.",
+            deliveryStatus = MessageDeliveryStatus.DELIVERED,
+            messageType = MessageType.TEXT,
+            timestamp = "16/03/2025"
+        ),
+        username = "Yuvraj Singh"
+    ),
+    ChatListDataObject(
+        chatId = 9,
+        message = Message(
+            content = "Are you coming to the party tonight?",
+            deliveryStatus = MessageDeliveryStatus.DELIVERED,
+            messageType = MessageType.TEXT,
+            timestamp = "15/03/2025"
+        ),
+        username = "Jasprit Bumrah"
+    ),
+    ChatListDataObject(
+        chatId = 10,
+        message = Message(
+            content = "Hey, I found this interesting article. Check it out!",
+            deliveryStatus = MessageDeliveryStatus.READ,
+            messageType = MessageType.IMAGE,
+            timestamp = "14/03/2025"
+        ),
+        username = "Hardik Pandya"
+    ),
+    ChatListDataObject(
+        chatId = 11,
+        message = Message(
+            content = "I'm running late. See you in 10 minutes.",
+            deliveryStatus = MessageDeliveryStatus.PENDING,
+            messageType = MessageType.TEXT,
+            timestamp = "13/03/2025"
+        ),
+        username = "Shubman Gill"
+    ),
+    ChatListDataObject(
+        chatId = 12,
+        message = Message(
+            content = "Can you send me that report?",
+            deliveryStatus = MessageDeliveryStatus.DELIVERED,
+            messageType = MessageType.TEXT,
+            timestamp = "12/03/2025"
+        ),
+        username = "Rishabh Pant"
+    ),
+    ChatListDataObject(
+        chatId = 13,
+        message = Message(
+            content = "I’ll be on vacation next week.",
+            deliveryStatus = MessageDeliveryStatus.ERROR,
+            messageType = MessageType.TEXT,
+            timestamp = "11/03/2025"
+        ),
+        username = "KL Rahul"
+    ),
+    ChatListDataObject(
+        chatId = 14,
+        message = Message(
+            content = "Let's schedule a call for Monday.",
+            deliveryStatus = MessageDeliveryStatus.READ,
+            messageType = MessageType.VIDEO,
+            timestamp = "10/03/2025"
+        ),
+        username = "Anil Kumble"
+    ),
+    ChatListDataObject(
+        chatId = 15,
+        message = Message(
+            content = "Great job on the presentation!",
+            deliveryStatus = MessageDeliveryStatus.DELIVERED,
+            messageType = MessageType.VIDEO,
+            timestamp = "09/03/2025"
+        ),
+        username = "Gautam Gambhir"
     )
+
 )
